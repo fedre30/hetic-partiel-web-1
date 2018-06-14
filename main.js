@@ -35,7 +35,7 @@ Math.easeInOutQuad = function (t, b, c, d) {
 // EVENT AND FUNCTION CALL
 
 chevron.addEventListener('click', function () {
-  scrollTo(document.body, 0, 1250);
+  scrollTo(document.body, 0, 2000);
 });
 
 // END SCROLL
@@ -69,3 +69,21 @@ window.addEventListener('scroll', function () {
 
 
 // END NAVBAR
+
+
+// BURGER MENU
+
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('#mainav');
+
+burger.addEventListener('click', function () {
+  if(nav.classList.contains('showMenu')){
+    nav.classList.remove('showMenu');
+  }
+
+  else{
+    nav.classList.add('showMenu');
+  }
+});
+
+// END BURGER MENU
