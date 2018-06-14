@@ -1,3 +1,5 @@
+// SCROLL
+
 const chevron = document.querySelector('.chevron');
 const sectionTop = document.querySelector('#top');
 
@@ -35,3 +37,35 @@ Math.easeInOutQuad = function (t, b, c, d) {
 chevron.addEventListener('click', function () {
   scrollTo(document.body, 0, 1250);
 });
+
+// END SCROLL
+
+
+
+// NAVBAR
+
+const header = document.querySelector('.row1');
+const row3 = document.querySelector('.row3');
+var lastScrollTop = 0;
+
+header.classList.add('nav-animation');
+
+window.addEventListener('scroll', function () {
+  var scrollDirection = window.pageYOffset || document.documentElement.scrollTop;
+
+  if(row3.getBoundingClientRect().top < header.offsetHeight){
+    if(scrollDirection < lastScrollTop){
+      header.classList.add('nav-animation');
+    }
+    else{
+      header.classList.remove('nav-animation');
+    }
+
+    lastScrollTop = scrollDirection <= 0 ? 0 : scrollDirection
+
+  }
+
+});
+
+
+// END NAVBAR

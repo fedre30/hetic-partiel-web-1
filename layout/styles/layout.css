@@ -470,7 +470,8 @@ nav ol {
 
 /* Top Navigation */
 
-#mainav {}
+#mainav {
+}
 
 #mainav ul {
     text-transform: uppercase;
@@ -938,6 +939,10 @@ textarea:focus,
 .row1 {
     color: #FFFFFF;
     background-color: rgba(0, 0, 0, .2);
+	opacity: 0;
+	transition: all .2s ease;
+	position: fixed;
+
 }
 
 .row2 {
@@ -1370,4 +1375,9 @@ a:hover{
 
 .chevron img {
 	width: 100%;
+}
+
+.nav-animation{
+	opacity: 1;
+
 }
